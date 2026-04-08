@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-naija-green: #008751;
+  --color-naija-green-dark: #006b40;
+  --color-naija-green-light: #e6f3ee;
+  
+  --color-worse: #dc2626;
+  --color-worse-bg: #fef2f2;
+  --color-better: #059669;
+  --color-better-bg: #ecfdf5;
+  --color-neutral: #4b5563;
+  --color-neutral-bg: #f3f4f6;
+
+  --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+}
+
+body {
+  @apply antialiased text-slate-900 bg-[#FDFDFB];
+}
+
+h1, h2, h3, h4 {
+  @apply tracking-tight;
+}
